@@ -8,6 +8,15 @@ from system import *
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
+def get():
+    # print(get_answer(request.json['question']))
+    return {
+		'Name':"Nguyt",
+		"Age":"22",
+		"programming":"python"
+		}
+
 @app.route('/post', methods=['POST'])
 def post():
     # print(get_answer(request.json['question']))
