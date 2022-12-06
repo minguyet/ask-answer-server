@@ -8,7 +8,7 @@ from system import *
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/get', methods=['GET'])
 def get():
     # print(get_answer(request.json['question']))
     return {
