@@ -19,7 +19,6 @@ def get():
 
 @app.route('/post', methods=['POST'])
 def post():
-    # print(get_answer(request.json['question']))
     ans = {"ans": get_answer(request.json['question'])}
     return ans
 
