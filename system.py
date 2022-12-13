@@ -68,7 +68,9 @@ def get_answer(ans):
     si = cosine_similarity(sparse_matrix, sparse_matrix)[len(documents)-1]
     result = zip(range(len(si)), si)
     result = sorted(result, key=lambda x: x[1], reverse= True)
-    answer = data[result[1][0]]
+    answer = []
+    for x in range(1,6):
+        answer.append(data[result[x][0]])    
     return answer
 
 
