@@ -70,7 +70,13 @@ def get_answer(ans):
     result = sorted(result, key=lambda x: x[1], reverse= True)
     answer = []
     for x in range(1,6):
-        answer.append(data[result[x][0]])    
+        i = result[x][0]
+
+        if i == len(data): 
+            i = result[0][0]
+            answer.append(data[i])
+            continue
+        answer.append(data[i]) 
     return answer
 
 
